@@ -1,6 +1,5 @@
 import { ref } from "vue";
 
-
 const fipeCarController = (
   getCarsUseCase,
   getModelsUseCase,
@@ -27,10 +26,15 @@ const fipeCarController = (
       loading.value = true
       tipoVeiculo.value = tipo
       cars.value = await getCarsUseCase(tipoVeiculo.value)
-      console.log("🚀 ~ file: fipeCarController.js:31 ~ searchBrands ~ cars.value:", cars.value)
+
+      selectedBrand.value = null
+      selectedModel.value = null
+      selectedYear.value = null
+      vehiclePrice.value = {}
     } catch (error) {
       alert(error.toString())
     } finally {
+      drawer.value = false
       loading.value = false
     }
   }
@@ -67,6 +71,7 @@ const fipeCarController = (
 
   const selectedYears = async () => {
     try {
+      loading.value = true
       const params = {
         "codigoMarca": selectedBrand.value.codigo,
         "codigoModelo": selectedModel.value.codigo,
@@ -77,6 +82,8 @@ const fipeCarController = (
       price.value = await getPriceUseCase(params)
     } catch (error) {
       alert(error.toString())
+    } finally {
+      loading.value = false
     }
   }
 
