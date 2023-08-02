@@ -79,7 +79,7 @@
             border
           >
             <v-col cols="4 py-0 px-5">
-              <v-select
+              <v-autocomplete
                 placeholder="Select Brand"
                 density="compact"
                 theme="light"
@@ -93,11 +93,11 @@
                 :loading="controller.loading.value"
                 :items="controller.cars.value"
                 @update:model-value="controller.selectedBrands('carros')"
-              ></v-select>
+              ></v-autocomplete>
             </v-col>
             <v-divider :thickness="3" color="grey" vertical inset></v-divider>
             <v-col cols="4 py-0 px-5">
-              <v-select
+              <v-autocomplete
                 placeholder="Select Model"
                 density="compact"
                 theme="light"
@@ -111,11 +111,11 @@
                 :loading="controller.loading.value"
                 :items="controller.models.value"
                 @update:model-value="controller.selectedModels()"
-              ></v-select>
+              ></v-autocomplete>
             </v-col>
             <v-divider :thickness="3" color="grey" vertical inset></v-divider>
             <v-col cols="4 py-0 px-5">
-              <v-select
+              <v-autocomplete
                 placeholder="Select Year"
                 density="compact"
                 theme="light"
@@ -129,7 +129,7 @@
                 :loading="controller.loading.value"
                 :items="controller.years.value"
                 @update:model-value="controller.selectedYears()"
-              ></v-select>
+              ></v-autocomplete>
             </v-col>
           </v-sheet>
         </v-row>
@@ -235,8 +235,7 @@
             elevation="0"
             class="text-center"
             width="400"
-            title="Please filter to return data!"
-          ></v-card>
+          ><h4>Please, first select type and filter to return data!</h4></v-card>
         </v-row>
       </v-container>
     </v-main>
