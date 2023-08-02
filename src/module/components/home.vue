@@ -89,6 +89,7 @@
                 return-object
                 hide-details
                 v-model="controller.selectedBrand.value"
+                :disabled="!controller.tipoVeiculo.value"
                 :loading="controller.loading.value"
                 :items="controller.cars.value"
                 @update:model-value="controller.selectedBrands('carros')"
@@ -106,6 +107,7 @@
                 return-object
                 hide-details
                 v-model="controller.selectedModel.value"
+                :disabled="!controller.selectedBrand.value"
                 :loading="controller.loading.value"
                 :items="controller.models.value"
                 @update:model-value="controller.selectedModels()"
@@ -123,6 +125,7 @@
                 return-object
                 hide-details
                 v-model="controller.selectedYear.value"
+                :disabled="!controller.selectedModel.value"
                 :loading="controller.loading.value"
                 :items="controller.years.value"
                 @update:model-value="controller.selectedYears()"

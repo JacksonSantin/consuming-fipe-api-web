@@ -20,6 +20,7 @@ const fipeCarController = (
   const drawer = ref(null)
   const tipoVeiculo = ref('')
   const loading = ref(false)
+  const disabled = ref(false)
 
   const searchBrands = async (tipo) => {
     try {
@@ -102,6 +103,7 @@ const fipeCarController = (
     drawer,
     tipoVeiculo,
     loading,
+    disabled,
     searchBrands,
     selectedBrands,
     selectedModels,
