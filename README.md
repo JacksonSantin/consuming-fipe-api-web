@@ -25,8 +25,7 @@
 ---
 
 ## 🖼️ Imagem do Projeto
-![image](https://github.com/JacksonSantin/consuming-fipe-api-web/assets/30778051/9d5d7b9b-883c-42a3-8a0c-b030ebfa4775)
-
+![image](https://github.com/JacksonSantin/consuming-fipe-api-web/assets/30778051/0c2ca793-c6de-4a23-8fb7-7a2bfd3b9afc)
 
 ---
 
